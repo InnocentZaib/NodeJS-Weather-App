@@ -20,8 +20,10 @@ weatherForm.addEventListener('submit', (event) => {
             weatherMsg.textContent = '';
             errorMsg.textContent = data.error;
         }else {
-            console.log(data.forecast);
-            weatherMsg.textContent = 'Weather of ' + search.value + ' is ' + data.forecast.icon + '. And the temperature is ' + data.forecast.temperature;
+
+            weatherMsg.textContent = location;
+            weatherMsg.innerHTML += "<br/>";
+            weatherMsg.textContent += 'Weather of ' + search.value + ' is ' + data.forecast.icon + '. And the temperature is ' + data.forecast.temperature;
             
         }
     })
