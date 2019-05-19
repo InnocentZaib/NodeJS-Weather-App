@@ -2,8 +2,9 @@ const express = require('express');
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 const path = require('path');
-const app = express();
 
+const app = express();
+const port = process.env.PORT || 3000;
 // Add a comment for git
 
 //SET TEMPLATE ENGINE (EJS)
@@ -96,7 +97,7 @@ app.get('*', (req, res, next) => {
 })
 
 
-app.listen(3000, () => {
-    console.log("Server starts on port 3000");
+app.listen(port, () => {
+    console.log("Server starts on port " + port);
 });
 
