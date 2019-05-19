@@ -4,6 +4,7 @@ const forecast = require('./utils/forecast');
 const path = require('path');
 const app = express();
 
+// Add a comment for git
 
 //SET TEMPLATE ENGINE (EJS)
 app.set('view engine', 'ejs');
